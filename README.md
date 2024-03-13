@@ -32,34 +32,3 @@ Create the following APIs to
 3. Leave / Unpark car
 4. Registration number of cars with <colour>
 5. Slot numbers for car with <colour>
-
-# Api Definitions
-ParkingLot
-Create Parking Lot
-base: /api/ParkingLots
-verb: post
-payload(body):
-```
-{
-
-"id": "65e72adb1a811501c45afd72",
-"capacity": 10
-
-}
-```
-response:
-```
-
-{
-
-"isSuccess": true,
-"response": {
-
-"id": "65e72adb1a811501c45afd72",
-"capacity": 10,
-"isActive": true
-
-}
-
-}
-```
