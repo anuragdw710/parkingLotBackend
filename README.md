@@ -4,9 +4,7 @@
 
 - Each slot is given a number starting at 1 increasing with increasing distance from the entry point in steps of one.
 
-- I want to create an automated ticketing system that
-
-allows my customers to use my parking lot without human intervention.
+- I want to create an automated ticketing system that allows my customers to use my parking lot without human intervention.
 
 - When a car
 enters my parking lot, the ticket will be issued to the driver. 
