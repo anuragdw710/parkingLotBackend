@@ -38,9 +38,11 @@ class CarRepository {
         }
     }
 
-    async conditionalselect(condition, select) {
+    async conditionalselect(condition, select, sortby) {
         try {
-            const response = Car.find(condition, select);
+            console.log(sortby);
+            const response = await Car.find(condition, select).sort(sortby);
+            console.log(response);
             return response;
         } catch (error) {
             console.log(error);
