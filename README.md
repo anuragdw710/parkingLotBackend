@@ -171,6 +171,7 @@ Create the following APIs to
    ```
    i. slots  should be served in increasing order by  slotNumber
    ii. If an invalid color is provided to the api to then your api should give error
+
    ```
 
 ### Requirement Analysis
