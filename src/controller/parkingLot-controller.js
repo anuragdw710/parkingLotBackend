@@ -3,7 +3,6 @@ const { ParkingLotService } = require('../services/index');
 const parkingLotService = new ParkingLotService();
 const createParkingLot = async (req, res) => {
     try {
-        console.log(req.body.id, " ", req.body.capacity);
         if (!req.body.id || !req.body.capacity) {
             throw "Id or capacity is missing";
         }
@@ -29,7 +28,6 @@ const createParkingLot = async (req, res) => {
             }
         })
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             "isSuccess": false,
             "response": {},

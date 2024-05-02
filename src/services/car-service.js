@@ -29,7 +29,6 @@ class CarService {
             }
             throw "No available slot";
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }
@@ -38,19 +37,15 @@ class CarService {
             const response = await this.carRepository.remove(data);
             return response;
         } catch (error) {
-            console.log(error);
+            throw error;
         }
     }
 
     async conditionalselect(condition, col, sortBy) {
         try {
-            console.log(condition);
-            console.log(col);
-            console.log(sortBy);
             const response = await this.carRepository.conditionalselect(condition, col, sortBy);
             return response;
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }

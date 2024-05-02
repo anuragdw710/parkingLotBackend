@@ -6,7 +6,6 @@ class CarRepository {
             const response = Car.create(data);
             return response;
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }
@@ -15,7 +14,6 @@ class CarRepository {
             const slot = Car.find({ parkingLotId: id }, 'slotNumber -_id');
             return slot;
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }
@@ -24,7 +22,6 @@ class CarRepository {
             const slot = Car.find({ registrationNumber: registrationNumber }, 'slotNumber');
             return slot;
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }
@@ -33,7 +30,6 @@ class CarRepository {
             const response = Car.findOneAndDelete(data);
             return response;
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }
@@ -41,10 +37,8 @@ class CarRepository {
     async conditionalselect(condition, select, sortby) {
         try {
             const response = await Car.find(condition, select).sort(sortby);
-            console.log(response);
             return response;
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }

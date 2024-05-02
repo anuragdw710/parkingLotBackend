@@ -36,7 +36,6 @@ const createslot = async (req, res) => {
             }
         })
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             "isSuccess": false,
             "response": {},
@@ -76,7 +75,6 @@ const leavecar = async (req, res) => {
             }
         })
     } catch (error) {
-        console.log(error);
         return res.status(200).json({
             "isSuccess": false,
             "response": {},
@@ -102,7 +100,6 @@ const getregistrations = async (req, res) => {
             }
         });
     } catch (error) {
-        console.log(error);
         return res.status(200).json({
             "isSuccess": false,
             "response": {},
@@ -126,7 +123,6 @@ const getslots = async (req, res) => {
             }
         });
     } catch (error) {
-        console.log(error);
         return res.status(200).json({
             "isSuccess": false,
             "response": {},
