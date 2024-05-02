@@ -40,7 +40,6 @@ class CarRepository {
 
     async conditionalselect(condition, select, sortby) {
         try {
-            console.log(sortby);
             const response = await Car.find(condition, select).sort(sortby);
             console.log(response);
             return response;

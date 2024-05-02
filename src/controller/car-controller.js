@@ -94,7 +94,7 @@ const getregistrations = async (req, res) => {
             throw 'Query parameter is missing';
         }
         const response = await carService.conditionalselect(
-            { color: color, parkingLotId: parkingLotId }, 'registrationNumber -_id', '+updatedAt');
+            { color: color, parkingLotId: parkingLotId }, 'color registrationNumber -_id', '+updatedAt');
         return res.status(200).json({
             "isSuccess": true,
             "response": {

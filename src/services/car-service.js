@@ -42,9 +42,12 @@ class CarService {
         }
     }
 
-    async conditionalselect(condition, select, sortby) {
+    async conditionalselect(condition, col, sortBy) {
         try {
-            const response = await this.carRepository.conditionalselect(condition, select, sortby);
+            console.log(condition);
+            console.log(col);
+            console.log(sortBy);
+            const response = await this.carRepository.conditionalselect(condition, col, sortBy);
             return response;
         } catch (error) {
             console.log(error);
