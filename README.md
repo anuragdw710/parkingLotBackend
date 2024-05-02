@@ -3,15 +3,19 @@
 Create the following APIs to
 
 1. Create new parking Lot with capacity
+
    - URL Endpoint : https://parkinglotbackend-1.onrender.com/localhost:3000/api/ParkingLots
    - payload :
+
    ```
    {
     "id": "65e72adb1a811501c45afd72",
     "capacity": 10
    }
    ```
+
    - response
+
    ```
    {
     "isSuccess": true,
@@ -22,6 +26,16 @@ Create the following APIs to
     }
    }
    ```
+
+   - Constraints:
+
+   ```
+   i. Capacity should not be higher than 2000 or lower than 0
+   ii. Input validations
+   iii. id should be a hexadecimal string ideally 24 in length
+
+   ```
+
 2. Park car in the parking
 3. Leave / Unpark car
 4. Registration number of cars with colour
