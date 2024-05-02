@@ -39,7 +39,7 @@ Create the following APIs to
 
 2. Park car in the parking
 
-   - URL Endpoint : https://parkinglotbackend-1.onrender.com//api/Parkings
+   - URL Endpoint : https://parkinglotbackend-1.onrender.com/api/Parkings
    - verb: post
    - payload :
 
@@ -77,8 +77,101 @@ Create the following APIs to
    ```
 
 3. Leave / Unpark car
+
+   - URL Endpoint : https://parkinglotbackend-1.onrender.com/api/Parkings
+   - verb: delete
+   - payload :
+
+   ```
+   {
+    "parkingLotId": "65e72adb1a811501c45afd72",
+    "registrationNumber": "MH12A1234"
+   }
+   ```
+
+   - response
+
+   ```
+   {
+    "isSuccess": true,
+    "response": {
+        "slotNumber": 1,
+        "registrationNumber": "MH12A1234",
+        "status": "LEFT"
+    }
+   }
+   ```
+
+   - Constraints:
+
+   ```
+   Same constraints as create parking
+   ```
+
 4. Registration number of cars with colour
+
+   - URL Endpoint : https://parkinglotbackend-1.onrender.com/api/Parkings?color=WHITE&parkingLotId=65e72adb1a811501c45afd72
+   - verb: get
+   - queryParams: color, parkingLotId
+   - response
+
+   ```
+   {
+    "isSuccess": true,
+    "response": {
+        registrations": [
+            {
+                "color": "BLUE",
+                "registrationNumber": "MH15A4567"
+            },
+            {
+                "color": "BLUE",
+                "registrationNumber": "MH13K4567"
+            }
+        ]
+    }
+   }
+   ```
+
+   - Constraints:
+
+   ```
+   i. registrations  array should follow natural ordering based on the db insertion
+   ii. If cars of specified color (say WHITE) is not available then your api should respond with error.
+   ```
+
 5. Slot numbers for car with colour
+
+   - URL Endpoint : https://parkinglotbackend-1.onrender.com/api/Slots?color=BLACK&parkingLotId=65e72adb1a811501c45afd72
+   - verb: get
+   - queryParams: color,parkingLotId
+
+   - response
+
+   ```
+   {
+    "isSuccess": true,
+    "response": {
+        "slots":[
+            {
+                "color": "BLACK",
+                "slotNumber": 2
+            },
+            {
+                "color": "BLACK",
+                "slotNumber": 3
+            }
+        ]
+    }
+   }
+   ```
+
+   - Constraints:
+
+   ```
+   i. slots  should be served in increasing order by  slotNumber
+   ii. If an invalid color is provided to the api to then your api should give error
+   ```
 
 ### Requirement Analysis
 
