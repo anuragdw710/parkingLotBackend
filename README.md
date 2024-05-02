@@ -4,7 +4,8 @@ Create the following APIs to
 
 1. Create new parking Lot with capacity
 
-   - URL Endpoint : https://parkinglotbackend-1.onrender.com/localhost:3000/api/ParkingLots
+   - URL Endpoint : https://parkinglotbackend-1.onrender.com/api/ParkingLots
+   - verb: post
    - payload :
 
    ```
@@ -37,6 +38,44 @@ Create the following APIs to
    ```
 
 2. Park car in the parking
+
+   - URL Endpoint : https://parkinglotbackend-1.onrender.com//api/Parkings
+   - verb: post
+   - payload :
+
+   ```
+   {
+    "parkingLotId": "65e72adb1a811501c45afd72",
+    "registrationNumber": "MH12A1234",
+    "color": "YELLOW"
+   }
+   ```
+
+   - response
+
+   ```
+   {
+    "isSuccess": true,
+    "response": {
+        "slotNumber": 1,
+        "status": "PARKED"
+    }
+   }
+   ```
+
+   - Constraints:
+
+   ```
+   i. registrationNumber  should be a valid registration number
+   ii. For now you can consider that each state will have a maximum of 20 districts.
+   ii. The leading alphabet after the district code should only be one in length.
+   iv. Total length should be 9.
+   v. status  will be limited to  PARKED  and  LEFT
+   vi.  parkingLotId  should correspond an active parkingLot
+   vii. Only the following colored cars are allowed in the parking lot
+    RED - GREEN - BLUE - BLACK - WHITE - YELLOW - ORANGE
+   ```
+
 3. Leave / Unpark car
 4. Registration number of cars with colour
 5. Slot numbers for car with colour
