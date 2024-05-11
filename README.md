@@ -178,6 +178,9 @@ Create the following APIs to
 
    ```
 
+   ![image](https://github.com/anuragdw710/parkingLotBackend/assets/78266752/bcf2fdeb-66ac-47c8-88b3-fe5a7cf5210a)
+
+
 ### Requirement Analysis
 
 - I own a multi-storey parking lot that can hold up to 'n' cars at any given point in time.
