@@ -1,4 +1,8 @@
+
 #### Backend assignmnet
+![image](https://github.com/anuragdw710/parkingLotBackend/assets/78266752/5f2fac33-7819-46b7-975f-12af48d47660)
+
+
 
 Create the following APIs to
 
