@@ -204,3 +204,9 @@ Create the following APIs to
 - Registration numbers of all cars of a particular colour.
 - Slot number in which a car with a given registration number is parked.
 - Slot numbers of all slots where a car of a particular colour is parked.
+
+
+
+
+
+## [Auth service](https://github.com/anuragdw710/Auth) 
